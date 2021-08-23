@@ -1,6 +1,47 @@
+* {
+  /*body 태그에는 기본적으로 margin, padding이 들어간다.
+  이를 방지하기 위해 0, 0으로 설정해줌*/
+  /* + 모든 태그에 대해서 margin, padding 제거 */
+  margin: 0;
+  padding: 0;
+  line-height: normal; /*antd 기본적으로 줄간격을 지정해놓아서 빈 공간이 생김 -> 이를 막기 위해 normal로 지정*/
+}
+
 html,
 body,
 #root,
 #root > div {
   height: 100%;
+}
+
+#header {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+#header-area {
+  width: 1024px;
+  height: 100%;
+  display: flex;
+  align-items: center; /*수직 방향으로 자식 정렬*/
+  justify-content: space-between;
+  /* flex를 하면 수평방향으로 정렬되는데, 여기서 로고와 상품 업로드 버튼을 양끝에 배치하기 위함 */
+}
+
+#header-area img {
+  /*자식 중에 id가 img인 값 알아서 찾아감*/
+  width: 128px;
+  height: 36px;
+}
+
+#body {
+  height: 100vh;
+  width: 1024px;
+  margin: 0 auto;
+}
+#footer {
+  height: 200px;
+  background-color: gray;
 }
